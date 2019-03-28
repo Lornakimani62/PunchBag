@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang=" " dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>PunchGame Practise</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div id="punchBag">
+
+
+            <!--Bag Image  -->
+            <div id="bagImage" :class='{burst:ended}'></div>
+            <!--Bag Health -->
+            <div id="bagHealth">
+                <div :style="{width:health + '%'}">
+
+                </div>
+            </div>
+            <!-- game controls -->
+            <div id="gameControls">
+                <button type="button" name="button" class="btn btn-primary"  @click='restart()'>Restart</button>
+                <button type="button" name="button" class="btn btn-danger" @click='punch()' v-show="!ended">Punch</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
